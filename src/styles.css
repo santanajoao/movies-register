@@ -6,6 +6,12 @@
 
 :root {
   font-size: 10px;
+  font-family: sans-serif;
+
+  --primaryRed: #B22222;
+  --primaryDark: #333;
+  --primaryYellow: #DAA520;
+  --primaryLight: #fff;
 }
 
 body {

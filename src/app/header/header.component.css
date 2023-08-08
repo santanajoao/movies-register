@@ -1,0 +1,10 @@
+#header {
+  background-color: var(--primaryDark);
+  color: var(--primaryLight);
+  padding: 1.4rem;
+}
+
+#text-logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
