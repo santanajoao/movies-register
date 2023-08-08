@@ -1,20 +1,21 @@
 #banner-container {
-  height: 50vh;
+  height: 55vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.2rem;
 }
 
 #banner-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: brightness(0.7);
+  filter: brightness(0.6);
 }
 
-#banner-text-wrapper {
+#banner-content-wrapper {
   padding: 1rem;
   text-align: center;
   width: 100%;
@@ -22,17 +23,33 @@
   z-index: 5;
   color: var(--primaryLight);
   max-width: 64rem;
-}
-
-#banner-title {
-  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
 }
 
 #movie-title {
   margin: 0.4rem;
-  color: var(--primaryYellow)
+  color: var(--primaryYellow);
 }
 
 #movie-synopsis {
   font-size: 1.4rem;
+}
+
+#banner-movie-link {
+  cursor: pointer;
+  color: var(--primaryDark);
+  font-size: 1.4rem;
+  background-color: var(--primaryYellow);
+  display: inline-block;
+  padding: 0.6em 1em;
+  font-weight: bold;
+  border-radius: 2em;
+  text-decoration: none;
+}
+
+#banner-movie-link:hover {
+  text-decoration: underline;
 }
