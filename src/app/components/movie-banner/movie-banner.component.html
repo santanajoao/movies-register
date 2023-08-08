@@ -1,0 +1,16 @@
+<div *ngIf="movie" id="banner-container">
+  <div id="banner-text-wrapper">
+    <h2 id="banner-title">Descubra o próximo filme da sua lista</h2>
+
+    <div>
+      <h3 id="movie-title">{{movie.title}}</h3>
+      <p id="movie-synopsis">{{movie.synopsis}}</p>
+    </div>
+  </div>
+
+  <img
+    [src]="movie.banner"
+    id="banner-image"
+    alt="Imagem do filme {{movie.title}}"
+  >
+</div>

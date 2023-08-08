@@ -4,13 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MovieBannerComponent } from './components/movie-banner/movie-banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MovieListComponent
+    HomeComponent,
+    MovieBannerComponent
   ],
   imports: [
     BrowserModule,
