@@ -16,7 +16,7 @@
   color: var(--primaryYellow);
 }
 
-#star-radio-input:is(:hover, :focus, :checked) + #star-radio-icon {
+#star-radio-input:enabled:is(:hover, :focus, :checked) + .star-radio-icon {
   color: var(--primaryYellow);
 }
 
