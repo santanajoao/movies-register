@@ -11,6 +11,7 @@ export class StarRadioInputComponent {
   @Input() name: string | undefined;
   @Input() selectedRating: number | undefined;
   @Input() disabled: boolean | undefined = false;
+  @Input() size: string | undefined;
 
   isSelected() {
     return this.selectedRating && this.value

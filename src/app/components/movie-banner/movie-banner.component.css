@@ -1,6 +1,5 @@
 #banner-container {
   height: 55vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

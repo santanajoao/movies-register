@@ -1,4 +1,4 @@
-<div class="inputs-container">
+<div class="inputs-container" [attr.aria-label]="'{{rating}} estrelas'">
   <app-star-radio-input
     value="1"
     name="rating"
@@ -6,6 +6,7 @@
     (change)="handleChange($event)"
     [selectedRating]="rating"
     [disabled]="disabled"
+    [size]="size"
   ></app-star-radio-input>
   
   <app-star-radio-input
@@ -15,6 +16,7 @@
     label="Duas estrelas"
     [selectedRating]="rating"
     [disabled]="disabled"
+    [size]="size"
   ></app-star-radio-input>
 
   <app-star-radio-input
@@ -24,6 +26,7 @@
     label="Três estrelas"
     [selectedRating]="rating"
     [disabled]="disabled"
+    [size]="size"
   ></app-star-radio-input>
 
   <app-star-radio-input
@@ -33,6 +36,7 @@
     label="Quatro estrelas"
     [selectedRating]="rating"
     [disabled]="disabled"
+    [size]="size"
   ></app-star-radio-input>
 
   <app-star-radio-input
@@ -42,5 +46,6 @@
     label="Cinco estrelas"
     [selectedRating]="rating"
     [disabled]="disabled"
+    [size]="size"
   ></app-star-radio-input>
 </div>

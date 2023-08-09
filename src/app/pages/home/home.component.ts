@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ratedMovies, watchLaterMovies } from 'src/data/movies';
+import { Component } from '@angular/core';
 import { Movie } from 'src/types/Movie';
 
 @Component({
@@ -19,7 +18,6 @@ export class HomeComponent {
     if (data && Array.isArray(data)) {
       return data;
     }
-
     return [];
   }
 
@@ -32,6 +30,6 @@ export class HomeComponent {
       return this.ratedMovies.at(-1);
     }
 
-    return undefined;
+    return;
   }
 }

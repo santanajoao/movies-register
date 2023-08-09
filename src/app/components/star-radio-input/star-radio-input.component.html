@@ -6,10 +6,13 @@
     type="radio"
     id="star-radio-input"
     [disabled]="disabled"
+    [width]="size"
   >
 
   <span
     class="fa-solid fa-star star-radio-icon {{isSelected() && 'selected'}}"
+    [style.fontSize]="size"
+    aria-hidden="true"
   >
   </span>
 </div>

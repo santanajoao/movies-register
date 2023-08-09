@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class RatingInputComponent {
   @Input() disabled: boolean | undefined = false;
   @Input() rating: number | undefined = 0;
+  @Input() size: string | undefined;
 
   handleChange(event: Event) {
     if (event.target instanceof HTMLInputElement) {

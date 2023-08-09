@@ -1,0 +1,21 @@
+<ul class="movie-list">
+      <li *ngFor="let movie of movies">
+        <div class="movie-card">
+          <a [routerLink]="['movies', movie.id]">
+            <img [src]="movie.banner" [alt]="'Banner do filme ' + movie.title">
+          </a>
+        
+          <div class="content-wrapper">
+            <app-rating-input
+              *ngIf="movie.rating"
+              size="1.4rem"
+              [disabled]="true"
+              [rating]="movie.rating"
+            ></app-rating-input>
+
+            <h4>{{movie.title}}</h4>
+            <p>{{movie.synopsis}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>

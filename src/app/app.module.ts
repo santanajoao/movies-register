@@ -10,6 +10,7 @@ import { RatingInputComponent } from './components/rating-input/rating-input.com
 import { StarRadioInputComponent } from './components/star-radio-input/star-radio-input.component';
 import { PresentationBannerComponent } from './components/presentation-banner/presentation-banner.component';
 import { AncorComponent } from './components/ancor/ancor.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AncorComponent } from './components/ancor/ancor.component';
     StarRadioInputComponent,
     PresentationBannerComponent,
     AncorComponent,
+    MovieListComponent,
   ],
   imports: [
     BrowserModule,
