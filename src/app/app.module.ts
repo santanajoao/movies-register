@@ -8,6 +8,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { MovieBannerComponent } from './components/movie-banner/movie-banner.component';
 import { RatingInputComponent } from './components/rating-input/rating-input.component';
 import { StarRadioInputComponent } from './components/star-radio-input/star-radio-input.component';
+import { PresentationBannerComponent } from './components/presentation-banner/presentation-banner.component';
+import { AncorComponent } from './components/ancor/ancor.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { StarRadioInputComponent } from './components/star-radio-input/star-radi
     MovieBannerComponent,
     RatingInputComponent,
     StarRadioInputComponent,
+    PresentationBannerComponent,
+    AncorComponent,
   ],
   imports: [
     BrowserModule,

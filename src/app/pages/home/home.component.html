@@ -1,1 +1,8 @@
-<app-movie-banner [movie]="movie"></app-movie-banner>
+<app-movie-banner
+  *ngIf="bannerMovie; else presentationBanner"
+  [movie]="bannerMovie"
+></app-movie-banner>
+
+<ng-template #presentationBanner>
+  <app-presentation-banner></app-presentation-banner>
+</ng-template>

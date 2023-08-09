@@ -1,0 +1,20 @@
+#banner-container {
+  height: 55vh;
+  background-color: var(--primaryDark);
+  background-image: url("https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/640776f5bf589aa0c82c42e4_movie%20poster%20design-p-1600.jpg");
+  background-size: cover;
+}
+
+#banner-content-wrapper {
+  color: var(--primaryLight);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0 0 0 / 35%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
