@@ -1,0 +1,46 @@
+<div class="inputs-container">
+  <app-star-radio-input
+    value="1"
+    name="rating"
+    label="Uma estrela"
+    (change)="handleChange($event)"
+    [selectedRating]="rating"
+    [disabled]="disabled"
+  ></app-star-radio-input>
+  
+  <app-star-radio-input
+    (change)="handleChange($event)"
+    value="2"
+    name="rating"
+    label="Duas estrelas"
+    [selectedRating]="rating"
+    [disabled]="disabled"
+  ></app-star-radio-input>
+
+  <app-star-radio-input
+    (change)="handleChange($event)"
+    value="3"
+    name="rating"
+    label="Três estrelas"
+    [selectedRating]="rating"
+    [disabled]="disabled"
+  ></app-star-radio-input>
+
+  <app-star-radio-input
+    (change)="handleChange($event)"
+    value="4"
+    name="rating"
+    label="Quatro estrelas"
+    [selectedRating]="rating"
+    [disabled]="disabled"
+  ></app-star-radio-input>
+
+  <app-star-radio-input
+    (change)="handleChange($event)"
+    value="5"
+    name="rating"
+    label="Cinco estrelas"
+    [selectedRating]="rating"
+    [disabled]="disabled"
+  ></app-star-radio-input>
+</div>

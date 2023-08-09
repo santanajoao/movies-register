@@ -1,0 +1,16 @@
+<div id="star-radio">
+  <input
+    [value]="value"
+    [name]="name"
+    [attr.aria-label]="label"
+    type="radio"
+    id="star-radio-input"
+    [disabled]="disabled"
+  >
+
+  <span
+    class="fa-solid fa-star {{isSelected() && 'selected'}}"
+    class="star-radio-icon"
+  >
+  </span>
+</div>

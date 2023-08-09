@@ -1,12 +1,16 @@
 <div *ngIf="movie" id="banner-container">
   <div id="banner-content-wrapper">
-    <h2>Descubra o próximo filme da sua lista</h2>
+    <h2>{{movie.rating
+      ? 'Confira o último filme que você avaliou'
+      : 'Descubra o próximo filme da sua lista'
+    }}</h2>
 
-    <div>
+    <div id="banner-movie-infos">
       <h3 id="movie-title">{{movie.title}}</h3>
       <p id="movie-synopsis">{{movie.synopsis}}</p>
+      <app-rating-input *ngIf="movie.rating" [rating]="movie.rating" [disabled]="true"></app-rating-input>
     </div>
-
+    
     <a [routerLink]="['movies', movie.id]" id="banner-movie-link">
       Ver detalhes
     </a>

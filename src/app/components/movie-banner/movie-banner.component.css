@@ -13,6 +13,7 @@
   width: 100%;
   object-fit: cover;
   filter: brightness(0.6);
+  background-color: var(--primaryDark);
 }
 
 #banner-content-wrapper {
@@ -29,6 +30,12 @@
   align-items: center;
 }
 
+#banner-movie-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #movie-title {
   margin: 0.4rem;
   color: var(--primaryYellow);
@@ -36,6 +43,7 @@
 
 #movie-synopsis {
   font-size: 1.4rem;
+  margin-bottom: 0.4rem;
 }
 
 #banner-movie-link {
