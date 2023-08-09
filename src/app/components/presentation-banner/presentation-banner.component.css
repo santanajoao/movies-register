@@ -1,5 +1,5 @@
 #banner-container {
-  height: 55vh;
+  height: 100vh;
   background-color: var(--primaryDark);
   background-image: url("https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/640776f5bf589aa0c82c42e4_movie%20poster%20design-p-1600.jpg");
   background-size: cover;

@@ -7,7 +7,7 @@
   <app-presentation-banner></app-presentation-banner>
 </ng-template>
 
-<article>
+<article *ngIf="watchLaterMovies.length || ratedMovies.length">
   <section *ngIf="watchLaterMovies.length">
     <h3>Lista de desejos</h3>
     <app-movie-list [movies]="watchLaterMovies"></app-movie-list>
