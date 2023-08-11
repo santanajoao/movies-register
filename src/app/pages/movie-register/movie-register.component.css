@@ -1,8 +1,7 @@
-.page-wrapper {
+.page-padding {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
   color: var(--primaryDark);
 }
 
@@ -53,10 +52,4 @@ button {
   font-weight: bold;
   border: none;
   border-radius: 0.5em;
-}
-
-@media screen and (min-width: 600px) {
-  .page-wrapper {
-    padding: 2rem;
-  } 
 }

@@ -1,0 +1,28 @@
+.page-padding {
+  color: var(--primaryDark);
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.movie-infos {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.rating-wrapper {
+  margin-bottom: 2rem;
+}
+
+.rating-wrapper > span {
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  display: inline-block;
+}

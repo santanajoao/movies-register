@@ -27,3 +27,13 @@ button {
 li {
   list-style: none;
 }
+
+.page-padding {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .page-padding {
+    padding: 2rem;
+  }
+}

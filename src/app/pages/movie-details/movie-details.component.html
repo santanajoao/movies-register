@@ -1,0 +1,24 @@
+<div>
+  <div *ngIf="movie">
+    <img
+    class="banner"
+    [src]="movie.banner"
+    [alt]="'Banner do filme ' + movie.title"
+    >
+    
+    <div class="page-padding movie-infos">
+      <h1>{{movie.title}}</h1>
+  
+      <div class="rating-wrapper">
+        <span>Sua nota:</span>
+        <app-rating-input
+          (change)="handleRatingChange"
+          id="rating-input"
+          [rating]="movie.rating"
+        ></app-rating-input>
+      </div>
+  
+      <p>{{movie.synopsis}}</p>
+    </div>
+  </div>
+</div>
