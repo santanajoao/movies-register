@@ -4,12 +4,19 @@
   font-size: 1.4rem;
   background-color: var(--primaryYellow);
   display: inline-block;
-  padding: 0.6em 1em;
   font-weight: bold;
   border-radius: 2em;
   text-decoration: none;
+  text-align: center;
+  padding: 0.6em 0.4em;
 }
 
 #ancor:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+  #ancor {
+    padding: 0.6em 1em;
+  }
 }

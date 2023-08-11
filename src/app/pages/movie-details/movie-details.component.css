@@ -2,7 +2,7 @@
   color: var(--primaryDark);
 }
 
-h1 {
+.movie-title {
   margin-bottom: 1rem;
 }
 
@@ -25,4 +25,29 @@ h1 {
   font-weight: 700;
   margin-bottom: 0.2em;
   display: inline-block;
+}
+
+.not-found-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found-title {
+  text-align: center;
+}
+
+.not-found-text-wrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.not-found-ancors {
+  display: flex;
+  gap: 1rem;
 }

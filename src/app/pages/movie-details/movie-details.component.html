@@ -1,24 +1,39 @@
-<div>
-  <div *ngIf="movie">
-    <img
-    class="banner"
-    [src]="movie.banner"
-    [alt]="'Banner do filme ' + movie.title"
-    >
-    
-    <div class="page-padding movie-infos">
-      <h1>{{movie.title}}</h1>
+<div *ngIf="movie; else notFoundMessage">
+  <img
+  class="banner"
+  [src]="movie.banner"
+  [alt]="'Banner do filme ' + movie.title"
+  >
   
-      <div class="rating-wrapper">
-        <span>Sua nota:</span>
-        <app-rating-input
-          (rate)="handleRatingChange($event)"
-          id="rating-input"
-          [rating]="movie.rating"
-        ></app-rating-input>
-      </div>
-  
-      <p>{{movie.synopsis}}</p>
+  <div class="page-padding movie-infos">
+    <h1 class="movie-title">{{movie.title}}</h1>
+
+    <div class="rating-wrapper">
+      <span>Sua nota:</span>
+      <app-rating-input
+        (rate)="handleRatingChange($event)"
+        id="rating-input"
+        [rating]="movie.rating"
+      ></app-rating-input>
     </div>
+
+    <p>{{movie.synopsis}}</p>
   </div>
 </div>
+
+<ng-template #notFoundMessage>
+  <div class="page-padding not-found-container">
+    <div class="not-found-text-wrapper">
+      <h1 class="not-found-title">Filme não encontrado</h1>
+      <p>Infelizmente não foi possível encontrar um filme com esse id nos seus registros.</p>
+      <p>
+        Não encontrou algum filme? Aproveite para
+        <a [routerLink]="['/movies', 'register']">cadastrá-lo</a>.
+      </p>
+    </div>
+
+    <app-ancor [routerLink]="['/']">
+      Voltar para a página inicial
+    </app-ancor>
+  </div>
+</ng-template>
