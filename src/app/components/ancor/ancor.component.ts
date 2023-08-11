@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./ancor.component.css']
 })
 export class AncorComponent {
-  @Input() routerLink: string | undefined;
+  @Input() routerLink: any[] | undefined;
 }
