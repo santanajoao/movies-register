@@ -12,6 +12,7 @@ import { PresentationBannerComponent } from './components/presentation-banner/pr
 import { AncorComponent } from './components/ancor/ancor.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieRegisterComponent } from './pages/movie-register/movie-register.component';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MovieRegisterComponent } from './pages/movie-register/movie-register.co
     AncorComponent,
     MovieListComponent,
     MovieRegisterComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Movie } from 'src/types/Movie';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +8,11 @@ import { Movie } from 'src/types/Movie';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  ratedMovies = this.getStorageMovies('ratedMovies') as Movie[];
-  watchLaterMovies = this.getStorageMovies('watchLaterMovies') as Movie[];
+  ratedMovies: Movie[] = this.moviesService.getMovies().ratedMovies;
+  watchLaterMovies: Movie[] = this.moviesService.getMovies().watchLaterMovies;
   bannerMovie: Movie | undefined = this.getBannerMovie();
   
-  getStorageMovies(key: string) {
-    const json = localStorage.getItem(key);
-    const data = json && JSON.parse(json);
-
-    if (data && Array.isArray(data)) {
-      return data;
-    }
-    return [];
-  }
+  constructor(private moviesService: MoviesService) { };
 
   getBannerMovie() {
     if (this.watchLaterMovies.length) {
