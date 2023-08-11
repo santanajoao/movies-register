@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-star-radio-input',
@@ -12,9 +12,14 @@ export class StarRadioInputComponent {
   @Input() selectedRating: number | undefined;
   @Input() disabled: boolean | undefined = false;
   @Input() size: string | undefined;
+  @Output() rate = new EventEmitter();
 
   isSelected() {
     return this.selectedRating && this.value
       && this.selectedRating >= parseInt(this.value);
+  }
+
+  isChecked() {
+    return this.selectedRating === Number(this.value);
   }
 }

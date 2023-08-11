@@ -8,6 +8,7 @@ import { getMovieIndexById } from 'src/utils/binarySearch';
 export class MoviesService  {
   ratedMovies: Movie[] = this.getStorageMovies('ratedMovies');
   watchLaterMovies: Movie[] = this.getStorageMovies('watchLaterMovies');
+  lastId: number = this.getLastId(); 
 
   constructor() { };
 
@@ -17,6 +18,12 @@ export class MoviesService  {
 
     if (data) return data;
     return [];
+  }
+
+  private getLastId() {
+    const ratedLastId = this.ratedMovies.at(-1)?.id ?? 0;
+    const watchLaterLastId = this.watchLaterMovies.at(-1)?.id ?? 0;
+    return Math.max(ratedLastId, watchLaterLastId, 1) + 1;
   }
 
   getMovies() {
@@ -34,5 +41,34 @@ export class MoviesService  {
     if (watchLaterMovieIndex !== undefined) return this.watchLaterMovies[watchLaterMovieIndex];
 
     return undefined;
+  }
+
+  updateRating(movieId: number, newRate: Movie['rating']) {
+    const ratedMovieIndex = getMovieIndexById(this.ratedMovies, movieId);
+    const movieInRatedMovies = ratedMovieIndex !== undefined;
+    if (movieInRatedMovies) {
+      this.ratedMovies[ratedMovieIndex].rating = newRate;
+      localStorage.setItem('ratedMovies', JSON.stringify(this.ratedMovies));
+    } else {
+      this.rateForFirstTime(movieId, newRate);
+    }
+  }
+
+  rateForFirstTime(movieId: number, newRate: Movie['rating']) {
+    const watchLaterMovieIndex = getMovieIndexById(this.watchLaterMovies, movieId);
+    if (watchLaterMovieIndex === undefined) return;
+
+    const newRatedMovie: Movie = {
+      ...this.watchLaterMovies[watchLaterMovieIndex],
+      rating: newRate,
+      id: this.lastId,
+    }
+    this.lastId += 1;
+
+    this.watchLaterMovies.splice(watchLaterMovieIndex, 1);
+    localStorage.setItem('watchLaterMovies', JSON.stringify(this.watchLaterMovies));
+
+    this.ratedMovies.push(newRatedMovie);
+    localStorage.setItem('ratedMovies', JSON.stringify(this.ratedMovies));
   }
 }

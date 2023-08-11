@@ -12,7 +12,7 @@
       <div class="rating-wrapper">
         <span>Sua nota:</span>
         <app-rating-input
-          (change)="handleRatingChange"
+          (rate)="handleRatingChange($event)"
           id="rating-input"
           [rating]="movie.rating"
         ></app-rating-input>

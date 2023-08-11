@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-rating-input',
@@ -9,10 +9,13 @@ export class RatingInputComponent {
   @Input() disabled: boolean | undefined = false;
   @Input() rating: number | undefined = 0;
   @Input() size: string | undefined;
+  @Output() rate = new EventEmitter();
 
   handleChange(event: Event) {
     if (event.target instanceof HTMLInputElement) {
       this.rating = parseInt(event.target.value);
     }
+
+    this.rate.emit(event);
   }
 }

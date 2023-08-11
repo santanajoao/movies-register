@@ -25,9 +25,12 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   handleRatingChange(event: Event) {
-    if (!(event.target instanceof HTMLInputElement)) return;
+    if (!this.movie || !(event.target instanceof HTMLInputElement)) return;
 
-    const newRating = parseInt(event.target.value);
+    const newRating = parseInt(event.target.value) as Movie['rating'];
+
+    this.movie.rating = newRating;
+    this.moviesService.updateRating(this.movie.id, newRating);
   }
 
   test(event: Event) {

@@ -11,7 +11,7 @@
       <app-rating-input *ngIf="movie.rating" [rating]="movie.rating" [disabled]="true"></app-rating-input>
     </div>
     
-    <app-ancor>Ver detalhes</app-ancor>
+    <app-ancor [routerLink]="['movies', movie.id]">Ver detalhes</app-ancor>
   </div>
 
   <img
