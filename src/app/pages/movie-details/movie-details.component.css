@@ -2,7 +2,7 @@
   color: var(--primaryDark);
 }
 
-.movie-title {
+.movie-title, h2 {
   margin-bottom: 1rem;
 }
 
@@ -15,6 +15,10 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+section:not(:last-of-type) {
+  margin-bottom: 2rem;
 }
 
 .rating-wrapper {

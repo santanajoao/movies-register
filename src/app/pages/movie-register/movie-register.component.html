@@ -1,26 +1,32 @@
 <div class="page-padding">
   <h1>Cadastre um filme</h1>
   
-  <form class="form">
+  <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()" class="form">
     <label>
       Título
-      <input type="text" required>
+      <input type="text" formControlName="title" required>
+      <span *ngIf="registerForm.controls['title'].invalid" class="error-message">O título é obrigatório</span>
     </label>
   
     <label>
       Banner
-      <img *ngIf="banner" [src]="banner" [alt]="'Banner do filme ' + title">
-      <input type="file" accept="image/*" required>
+      <img
+        *ngIf="registerForm.controls.banner.valid"
+        [src]="registerForm.value.banner"
+        [alt]="'Banner do filme ' + registerForm.value.title"
+      >
+      <input type="text" formControlName="banner" required>
+      <span *ngIf="registerForm.controls['banner'].invalid" class="error-message">Uma imagem válida é obrigatória</span>
     </label>
 
     <label>
       Nota
-      <app-rating-input></app-rating-input>
+      <app-rating-input (rate)="handleRate($event)"></app-rating-input>
     </label>
   
     <label>
       Sinopse
-      <textarea></textarea>
+      <textarea formControlName="synopsis"></textarea>
     </label>
 
     <button type="submit">Cadastrar</button>

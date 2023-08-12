@@ -1,7 +1,7 @@
 .movie-list {
   display: flex;
   gap: 2rem;
-  overflow: auto;
+  overflow-x: auto;
   scroll-behavior: smooth;
 }
 
@@ -24,20 +24,21 @@
 .movie-card {
   background-color: var(--primaryLight);
   width: 25rem;
+  height: 26rem;
   border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  box-shadow: 0 0 10px #00000070;
   margin-bottom: 0.7rem;
+  overflow: hidden;
 }
 
-.movie-card  img {
+.movie-card img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
 .content-wrapper {
-  padding: 0.5rem 1rem 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

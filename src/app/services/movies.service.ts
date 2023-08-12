@@ -71,4 +71,15 @@ export class MoviesService  {
     this.ratedMovies.push(newRatedMovie);
     localStorage.setItem('ratedMovies', JSON.stringify(this.ratedMovies));
   }
+
+  addMovie(movie: Omit<Movie, 'id'>) {
+    if (movie.rating) {
+      this.ratedMovies.push({id: this.lastId, ...movie});
+      localStorage.setItem('ratedMovies', JSON.stringify(this.ratedMovies));
+    } else {
+      this.watchLaterMovies.push({ id: this.lastId, ...movie});
+      localStorage.setItem('watchLaterMovies', JSON.stringify(this.watchLaterMovies));
+    }
+    this.lastId += 1;
+  }
 }

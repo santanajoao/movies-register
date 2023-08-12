@@ -1,7 +1,7 @@
 <ul class="movie-list">
       <li *ngFor="let movie of movies">
         <div class="movie-card">
-          <a [routerLink]="['movies', movie.id]">
+          <a [routerLink]="['/movies', movie.id]">
             <img [src]="movie.banner" [alt]="'Banner do filme ' + movie.title">
           </a>
         

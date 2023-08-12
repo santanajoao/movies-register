@@ -13,6 +13,7 @@ import { AncorComponent } from './components/ancor/ancor.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieRegisterComponent } from './pages/movie-register/movie-register.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MovieDetailsComponent } from './pages/movie-details/movie-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

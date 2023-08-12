@@ -53,3 +53,9 @@ button {
   border: none;
   border-radius: 0.5em;
 }
+
+.error-message {
+  color: var(--primaryRed);
+  font-weight: normal;
+  font-size: 1.4rem;
+}

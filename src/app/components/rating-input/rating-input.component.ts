@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./rating-input.component.css']
 })
 export class RatingInputComponent {
-  @Input() disabled: boolean | undefined = false;
+  @Input() disabled: boolean = false;
   @Input() rating: number | undefined = 0;
   @Input() size: string | undefined;
   @Output() rate = new EventEmitter();
