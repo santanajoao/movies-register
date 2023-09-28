@@ -24,7 +24,7 @@
 .movie-card {
   background-color: var(--primaryLight);
   width: 25rem;
-  height: 26rem;
+  height: 28rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px #00000070;
   margin-bottom: 0.7rem;

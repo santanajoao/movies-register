@@ -5,12 +5,10 @@ import { getMovieIndexById } from 'src/utils/binarySearch';
 @Injectable({
   providedIn: 'root'
 })
-export class MoviesService  {
+export class MoviesService {
   ratedMovies: Movie[] = this.getStorageMovies('ratedMovies');
   watchLaterMovies: Movie[] = this.getStorageMovies('watchLaterMovies');
   lastId: number = this.getLastId(); 
-
-  constructor() { };
 
   private getStorageMovies(storageKey: string): Movie[] {
     const json = localStorage.getItem(storageKey);

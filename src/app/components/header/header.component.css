@@ -1,14 +1,14 @@
 #header {
   background-color: var(--primaryDark);
   color: var(--primaryLight);
-  padding: 1.4rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 #text-logo {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: bold;
   color: var(--primaryLight);
 }
@@ -16,4 +16,10 @@
 #text-logo > a {
   text-decoration: none;
   color: inherit;
+}
+
+@media screen and (min-width: 600px) {
+  #header {
+    padding: 1rem 2rem;
+  }
 }

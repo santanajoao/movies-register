@@ -14,7 +14,9 @@ export class MovieRegisterComponent {
     title: new FormControl('', Validators.required),
     rating: new FormControl<number | undefined>(undefined),
     synopsis: new FormControl<string | undefined>(undefined),
-    banner: new FormControl('', Validators.pattern('http(s)?:\/\/.+\.(jpg|jpeg|png|gif|bmp|webp)')),
+    banner: new FormControl(
+      '', Validators.pattern('http(s)?:\/\/.+\.(jpg|jpeg|png|gif|bmp|webp)'),
+    ),
   });
 
   constructor(
