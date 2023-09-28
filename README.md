@@ -2,6 +2,8 @@
 
 Uma aplicação de registro de filmes. Aqui, você pode cadastrar um filme que você assistiu, atribuir uma nota a ele ou adicionar como um filme que deseja assistir.
 
+![captura de tela do projeto](images/movies-register.png)
+
 ## Veja você mesmo
 
 ### [https://movies-register.vercel.app/](https://movies-register.vercel.app/)
