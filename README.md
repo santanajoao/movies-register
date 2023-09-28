@@ -10,7 +10,7 @@ Uma aplicação de registro de filmes. Aqui, você pode cadastrar um filme que v
 
 ## Sobre o projeto
 
-Esse projeto foi desenvolvido para consolidar o aprendizado dos conceitos de Angular.
+Esse projeto foi desenvolvido para consolidar o aprendizado dos conceitos de Angular aprendidos com seção _getting started_ da documentação do Angular.
 
 ## Tecnologias
 
